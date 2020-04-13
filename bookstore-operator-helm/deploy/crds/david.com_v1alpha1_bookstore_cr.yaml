@@ -1,4 +1,4 @@
-apiVersion: velotio.com/v1alpha1
+apiVersion: david.com/v1alpha1
 kind: BookStore
 metadata:
   name: example-bookstore
@@ -16,7 +16,8 @@ spec:
       repository: mongo
       tag: latest
   nodeSelector: {}
-  replicaCount: 1
+  replicas: 5
+  replicaCount: 2
   resources: {}
   service:
     app:

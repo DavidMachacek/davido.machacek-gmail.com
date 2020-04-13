@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookstore-operator
+  name: bookstore-operator-helm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: bookstore-operator
+      name: bookstore-operator-helm
   template:
     metadata:
       labels:
-        name: bookstore-operator
+        name: bookstore-operator-helm
     spec:
-      serviceAccountName: bookstore-operator
+      serviceAccountName: bookstore-operator-helm
       containers:
-        - name: bookstore-operator
+        - name: bookstore-operator-helm
           # Replace this with the built image name
-          image: davidmachacek/bookstore-operator:latest
+          image: davidmachacek/bookstore-operator-helm:latest
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
@@ -28,4 +28,4 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
-              value: "bookstore-operator"
+              value: "bookstore-operator-helm"

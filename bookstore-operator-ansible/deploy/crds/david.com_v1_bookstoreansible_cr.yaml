@@ -1,0 +1,7 @@
+apiVersion: david.com/v1
+kind: BookStoreAnsible
+metadata:
+  name: example-bookstoreansible
+spec:
+  # Add fields here
+  size: 3

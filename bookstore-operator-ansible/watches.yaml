@@ -1,0 +1,5 @@
+---
+- version: v1
+  group: david.com
+  kind: BookStoreAnsible
+  role: bookstoreansible
